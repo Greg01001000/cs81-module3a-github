@@ -64,3 +64,11 @@ let a = 1, b = 2, c = 3;
 console.log(`\nFor this set of numbers: ${a}, ${b}, ${c}`);
 let arr1 = sumAverage(a, b, c);
 console.log(`Their sum is ${arr1[0]}, and their average is ${arr1[1]}`);
+
+// #5 Single-expression arrow function receives lengths of two short sides of right
+// triangle and calculates length of hypotenuse (square root of sum of squared lengths)
+const hypotenuse = (sideA, sideB) => Math.sqrt(sideA ** 2 + sideB ** 2); 
+
+let x = 3, y = 4;
+console.log(`\nFor a right triangle whose short sides measure ${x} and ${y},`);
+console.log(`the hypotenuse measures ${hypotenuse(x, y)}`);
