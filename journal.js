@@ -5,8 +5,7 @@ function greet(name) {
 
 console.log(greet('Prof. Seno'));
 
-// Definition of function to find all a number's factors and add them to check
-// whether the number is perfect
+// #1 Declaration of function to find all prime numbers from 2 to the argument (limit)
 function findPrimes(limit) {
     let arr = [];
    
@@ -23,6 +22,7 @@ function findPrimes(limit) {
     return arr;
 }
 
+// #2 Function definition to display all prime numbers from 2 to the argument (limit)
 const showPrimes = function(limit) {
     let arr = findPrimes(limit);
     for (let i = 2; i <= limit; i++) {
@@ -32,4 +32,35 @@ const showPrimes = function(limit) {
     }
 };
 
-showPrimes(22);
+let limit = 22;
+console.log("\nPrime numbers from 2 through " + limit + " are:")
+showPrimes(limit);
+
+// #3 Arrow function receives circle's radius, displays diameter, circumference, & area
+const circle = r => {
+    const PI = 3.14159; // Initialize pi as constant
+    console.log("Diameter: " + (2 * r)); // Calculate & print diameter (2r)
+    console.log("Circumference: " + (2 * PI * r)); // Print circumference (2πr)
+    console.log("Area: " + (PI * r * r)); // Calculate & print area (πr*r)
+}
+
+let r = 10;
+console.log("\nCircle radius: " + r);
+circle(r);
+
+// #4 Function declaration receives any quantity of numeric arguments and returns a
+// two-element array: arr[0] is sum of all arguments, arr[1] is their average
+function sumAverage(...theArgs) {
+    let arr = [0, 0];
+    let len = theArgs.length;
+    for (let i = 0; i < len; i++) {
+        arr[0] += theArgs[i];
+    }
+    arr[1] = arr[0] / len;
+    return arr;
+}
+
+let a = 1, b = 2, c = 3;
+console.log(`\nFor this set of numbers: ${a}, ${b}, ${c}`);
+let arr1 = sumAverage(a, b, c);
+console.log(`Their sum is ${arr1[0]}, and their average is ${arr1[1]}`);

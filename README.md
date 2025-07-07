@@ -11,5 +11,6 @@ This assignment revolves around the included JavaScript file, journal.js, which 
 
 3. circle(radius): Arrow function receives a circle's radius as an argument and displays the diameter, circumference, & area using console.log()
 
- 
+4. sumAverage(...theArgs): Function declaration receives any quantity of numeric arguments and returns a two-element array: arr[0] is sum of all arguments, arr[1] is their average
+
 
